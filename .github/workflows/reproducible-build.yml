@@ -150,14 +150,14 @@ jobs:
           cat canonical-hashes.txt
 
       - name: Upload WASM artifacts
-        uses: actions/upload-artifact@v7
+        uses: actions/upload-artifact@v6
         with:
           name: wasm-artifacts-${{ github.sha }}
           path: build-1/*.wasm
           retention-days: 30
 
       - name: Upload canonical hash manifest
-        uses: actions/upload-artifact@v7
+        uses: actions/upload-artifact@v6
         with:
           name: wasm-hashes-${{ github.sha }}
           path: canonical-hashes.txt
